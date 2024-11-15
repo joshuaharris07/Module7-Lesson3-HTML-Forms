@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1>Contact Information</h1>
+    <form action="/submit" method="post">
+
+        <fieldset>
+            <legend>Basic Information</legend>
+
+            <label for="user-email">Email Address</label>
+            <input type="email" id="user-email" name="user-email" placeholder="Enter your email address" aria-label="email" required>
+
+            <label for="user-age">Age</label>
+            <input type="number" id="user-age" name="user-age" placeholder="Please enter your age" aria-label="age" required>
+
+            <label for="birth-date">Birth Date</label>
+            <input type="date" id="birth-date" name="birth-date" aria-label="birth-date" required>
+        </fieldset>
+
+        <label for="satisfaction">Satisfaction with this form (out of 10):</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" aria-label="satisfaction" oninput="this.nextElementSibling.value = this.value"> 
+        <!--I don't fully understand this, but I found this as a solution to show the current value of the range-->
+        <output>5</output>
+
+        <div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <br>
+
+    <form action="/submit">
+        <label for="programming-language">Choose your favorite programming language:</label>
+            <select name="programming-language" id="programming-language" required>
+                <option value="python">Python</option>
+                <option value="sql">SQL</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </select>
+
+        <label>How proficient are you with that language?</label>
+        <input type="radio" id="beginner" name="proficiency" value="beginner" aria-label="beginner" required>
+        <label for="beginner">Beginner</label>
+        <input type="radio" id="intermediate" name="proficiency" value="intermediate" aria-label="intermediate">
+        <label for="intermediate">Intermediate</label>
+        <input type="radio" id="advanced" name="proficiency" value="advanced" aria-label="advanced">
+        <label for="advanced">Advanced</label>
+
+        <label>Select your preferred development platforms:</label>
+        <input type="checkbox" id="web" name="preferred-platforms" value="yes" aria-label="web" required>
+        <label for="web">Web</label>
+        <input type="checkbox" id="mobile" name="preferred-platforms" value="yes" aria-label="mobile">
+        <label for="mobile">Mobile</label>
+        <input type="checkbox" id="desktop" name="preferred-platforms" value="yes" aria-label="desktop">
+        <label for="desktop">Desktop</label>
+
+        <div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
